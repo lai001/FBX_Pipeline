@@ -34,6 +34,7 @@ target("FBX_Pipeline")
         set_runtimes("MT")
         add_linkdirs(FBX_RELEASE_LIB)
     end
+    add_syslinks("advapi32")
     add_links("libfbxsdk" .. VS_RUNTIME_TYPE, "libxml2" .. VS_RUNTIME_TYPE, "zlib" .. VS_RUNTIME_TYPE)
     add_packages(NLOHMANN_JSON)
     add_packages(SPDLOG)
